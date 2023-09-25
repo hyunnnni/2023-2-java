@@ -1,7 +1,7 @@
 package com.green.day2.ch3;
 
 public class OperatorEx18 {
-    public static void main(String[] args) {
+    public static void main(String[] args) {    // 올림,내림,반올림
         float f1 = 15.1f, f2 = 15.6f, f3 = 15.9f;
 
         // ceil > 올림

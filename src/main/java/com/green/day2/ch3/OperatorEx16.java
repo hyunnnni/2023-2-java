@@ -1,6 +1,6 @@
 package com.green.day2.ch3;
 
-public class OperatorEx16 {
+public class OperatorEx16 { // 산술연산자 - * 사용해서 소수점 자리 없애기
     public static void main(String[] args){
         float pi = 3.141592f;
         System.out.println(pi);
