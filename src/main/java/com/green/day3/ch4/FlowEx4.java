@@ -2,7 +2,7 @@ package com.green.day3.ch4;
 
 import java.util.Scanner;
 
-public class FlowEx4 {  // 조건문 - if
+public class FlowEx4 {  // 조건문 - if, else if, else
     public static void main(String[] args) {
         int score = 0;
         System.out.print("점수를 입력하세요>");

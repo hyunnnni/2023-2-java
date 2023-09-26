@@ -8,6 +8,6 @@ public class OperatorEx32Mission {
         int n = 10;
 //        n = n * -1;
 //        n = -n;
-        System.out.println(n <0 ? "n : " + n * -1 : "n : " + n );
+        System.out.println(n < 0 ? "n : " + n * -1 : "n : " + n );
     }
 }

@@ -14,7 +14,7 @@ public class FlowEx2 {  // 조건문 - if, Scanner, nextLine, parseInt
         // 해당 숫자가 0이라면 콘솔에 "입력하신 숫자는 0입니다."
         // 해당 숫자가 0이 아니라면 콘솔에 "입력하신 숫자는 0이 아닙니다."
 
-        System.out.print("숫자를 하나 입력하세요");
+        System.out.print("숫자를 하나 입력하세요 > ");
         Scanner scan = new Scanner(System.in);
         String str = scan.nextLine();   // 화면을 통해 입력받은 내용을 str에 저장
         int input = Integer.parseInt(str);  // 입력받은 문자열(str)을 숫자로 변환

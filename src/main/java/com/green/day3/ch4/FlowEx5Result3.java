@@ -15,7 +15,7 @@ public class FlowEx5Result3 {
         // 나머지는 C학점 그냥 출력
 
         String grade = "C";
-        String opt = " ";
+        String opt = "";
 
         if (score >= 90) {    // A
             grade = "A";
@@ -24,7 +24,7 @@ public class FlowEx5Result3 {
         }
 
         if (score >= 80) {  // C학점은 opt없이 그냥 출력하기 때문에 score가 80점 이상일 때만 따로 if문 사용
-            int rMod = score % 10;
+            int rMod = score % 10;  // mod(%) 10하면 일의 자리 수 출력 가능
             if (rMod >= 8 || score == 100) {
                 opt = "+";
             } else if (rMod <= 3) {
