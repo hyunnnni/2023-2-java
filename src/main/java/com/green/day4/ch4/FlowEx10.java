@@ -18,7 +18,7 @@ public class FlowEx10 {
         // 70점 이상은 "당신의 학점은 C입니다."
         // 나머지는 "당신의 학점은 F입니다."
 
-        if (score < 1 || score > 100) {
+        if (score < 0 || score > 100) {
             System.out.println("잘못된 입력입니다.");
         } else {
             switch (score / 10) {
@@ -31,8 +31,6 @@ public class FlowEx10 {
                 case 7:
                     grade = 'C';
                     break;
-                default:
-                    grade = 'D';
             }
             System.out.printf("당신의 학점은 %s입니다.", grade);
         }
