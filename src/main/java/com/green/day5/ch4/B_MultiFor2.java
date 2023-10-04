@@ -20,7 +20,6 @@ public class B_MultiFor2 {
                 System.out.print("*");
             }
             System.out.println();
-            System.out.println();
         }
     }
 }
