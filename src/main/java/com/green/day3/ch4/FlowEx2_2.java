@@ -1,28 +1,25 @@
 package com.green.day3.ch4;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class FlowEx2_2 {    // 조건문 - if, Scanner, nextInt, printf
-    public static void main(String[] args) {
-        // 숫자를 하나 입력하세요> (콘솔창에 띄우기)
-        // (입력 기다리기)
-        // 숫자를 입력하고 엔터를 누르면
-        // (타입자유) 변수에 해당 값이 저장될 수 있도록
-        // 해당 값이 홀수면
-        // 00은 홀수입니다.
-        // 해당 값이 짝수면
-        // 00은 짝수입니다.
+public class FlowEx2_2 {
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in); // 입력을 나오게 하는
+        System.out.print("숫자를 하나 입력하세요 > "); //입력한 값은 문자형
+        String input = scan.nextLine(); //String 변수에 해당값이 저장
+        int num = Integer.parseInt(input); //문자열을 메소드(Integer.parseInt)를 이용해 정수형으로 변환
 
-        Scanner scan = new Scanner(System.in);
-        System.out.print("숫자를 하나 입력하세요 >");
-        int num = scan.nextInt();
+        if ( num != 0 ) {
+            System.out.println("입력하신 숫자는 0이 아닙니다"); //해당 숫자가 0이 아니라면
+            System.out.printf ("입력하신 숫자는 %d 입니다" , num);
+        } else {
+            System.out.println("입력하신 숫자는 0입니다");
+        }
 
-        if (num % 2 == 1) {
-            System.out.printf("%d는 홀수입니다.\n", num);
-        }
-        else {
-            System.out.printf("%d는 짝수입니다.\n", num);
-        }
+        //if (num == 0) {System.out.println(" 입력하신 숫자는 0입니다");}
+        // else {System.out.println("입력하신 숫자는 0이 아닙니다");}
+        //이렇게만 적어도 됨 else (이거 외 전부 나머지) 사용하게 되면 무조건 하나는 출력되게 됨
 
     }
 }

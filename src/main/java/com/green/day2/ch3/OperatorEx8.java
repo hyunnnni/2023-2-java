@@ -1,9 +1,9 @@
-package com.green.day2.ch3;
+package com.green.day2.Ch3;
 
-public class OperatorEx8 {  // 산술연산자 - _(언더바)사용해서 숫자 가독성 높이기
+public class OperatorEx8 {
     public static void main(String[] args) {
-        int a = 1000000;    // 1000000
-        int b = 2_000_000; // 2000000
+        int a = 1_000_000;
+        int b = 2_000_000; //언더바 가독성을 위해 없는 것과 마찬가지
 
         System.out.println("a : " + a);
         System.out.println("b : " + b);

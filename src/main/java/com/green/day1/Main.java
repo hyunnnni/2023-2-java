@@ -1,8 +1,9 @@
 package com.green.day1;
 
+//클래스부터 대괄호까지 메인 메소드라고 부름 main method
+
 class Main {
-    // main method 시작점
     public static void main(String[] args){
-        System.out.println("Hello World.");
+        System.out.println("hello, world!");
     }
 }
