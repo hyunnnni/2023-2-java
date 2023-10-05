@@ -18,32 +18,27 @@ public class B_FlowEx28 {
 
         while (true) {
             System.out.println("1~100 사이의 정수를 입력하세요 >> ");
-            input = scan.nextInt();
+            input = scan.nextInt();//객체는 속성과 메소드로 이루어져있다 속성은 .~~를 적었을 때()가 없으면 속성 있으면 메소드
             if (input < answer){
                 System.out.println("up");
             }else if(input > answer){
                 System.out.println("down");
-            }else if(input == answer){
+            } else {
                 break;
             }
+
 
         }
         System.out.println("정답입니다");
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        /*
+        while (true) {
+            System.out.println("1~100 사이의 정수를 입력하세요 >> ");
+            final int input = scan.nextInt(); //위에서 int 변수선언을 하지 않았을 때 사용
+            if (input == answer){ break; }
+            System.out.println(input < answer ? "up" : "down"
+         }
+         */
 
 
 

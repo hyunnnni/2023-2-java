@@ -14,7 +14,7 @@ public class A_FlowEx25 {
         while( num > 0){
             sum += num %10; //sum = sum + num %10;
             num /= 10;
-            *//*int modVal = num%10; 10을 나누기 하면 끝자리 수가 나머지로 남는다
+            //int modVal = num%10; 10을 나누기 하면 끝자리 수가 나머지로 남는다
             num = num / 10; 몫을 num에 넣어준다
 
             sum += modVal;
