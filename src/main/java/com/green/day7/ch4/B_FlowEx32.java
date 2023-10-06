@@ -16,23 +16,6 @@ public class B_FlowEx32 {
         Scanner scan = new Scanner(System.in);
 
 
-       /* String m1 = "(1)spuare";
-        String m2 = "(2)tri";
-        String m3 = "(3)log";
-
-
-
-           while(true){
-           System.out.println("(1)spuare\n (2)tri\n (3)log\n 원하는 메뉴를 선택하세요 (1~3) 종료(0) >> ");
-
-           String num = scan.nextLine();
-           int menu = Integer.parseInt(num);
-
-           if(menu <=3 ){
-               System.out.println( menu == 1 ? (menu == 2 ? "선택하신 메뉴는 %s입니다" : "선택하신 메뉴는 %s입니다");
-           }
-       }*/
-
         while (true) {
             System.out.println("(1)spuare\n(2)tri\n(3)log\n원하는 메뉴를 선택하세요 (1~3) 종료(0) >> ");
 

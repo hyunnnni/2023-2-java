@@ -15,9 +15,7 @@ public class A_FlowEx29 {
                 System.out.print("짝");
             }
 
-            int num = i%10;
-
-            if(num == 3){
+            if(i%10 == 3){
                 System.out.print("짝");
             }else if(num == 6){
                 System.out.print("짝");
@@ -25,9 +23,7 @@ public class A_FlowEx29 {
                 System.out.print("짝");
             }
 
-            int num2 = i/10;
-
-            if(num2 == 3){
+            if(i/10 == 3){
                 System.out.print("짝");
             }else if(num2 == 6){
                 System.out.print("짝");
@@ -44,7 +40,7 @@ public class A_FlowEx29 {
             int temp = i;
             while(temp>0){
                 int modVal = temp %10;
-                if(modVal != 0 && modVal % 3 == 0);{ //2개가 전부 true가 뜨면 짝이 나온다 몫이 0이 나올 때까지
+                if(modVal != 0 && modVal % 3 == 0);{ //2개가 전부 true가 뜨면 짝이 나온다
                 System.out.print("짝");
                 }
                 temp /= 10;

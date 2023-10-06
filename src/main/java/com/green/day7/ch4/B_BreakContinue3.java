@@ -14,7 +14,7 @@ public class B_BreakContinue3 {
         for (int i = 0; i<5; i++){
 
             for (int z = 10; z<15; z++){
-                if(z == 13) { continue def;} //원하는 조건의 뒤에 붙인 continue 뒤에 반복문의 이름을 적으면 해당 반복문의 뒤 코드를 더 이상 수행하지 않고 빠져나온다 그냥 break 쓰는 것과 같음
+                if(z == 13) { continue def;} //원하는 조건의 뒤에 붙인 continue의 뒤에 반복문의 이름을 적으면 해당 반복문의 뒤 코드를 더 이상 수행하지 않고 빠져나온다 그냥 break 쓰는 것과 같음
                 System.out.printf("i : %d - z : %d\n", i, z);
             }
         }

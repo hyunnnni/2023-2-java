@@ -12,8 +12,6 @@ public class A_ArrayMission {
        400
        500*/
 
-        System.out.println("e.g.\n");
-
         for(int i = 0; i < arr.length; i++){ //배열의 길이만큼 수행됨
             System.out.println( arr[i] );
 

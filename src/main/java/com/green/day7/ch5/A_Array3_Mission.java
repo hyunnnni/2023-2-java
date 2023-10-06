@@ -12,7 +12,7 @@ public class A_Array3_Mission {
             arr2 [i] = arr1 [i];
         }
 
-        arr2 [3] = 20; //arr1.length로 넣는다 arr1은 arr2의 방번호보다 한 칸 더 적으니깐 이렇게 넣어준다
+        arr2 [3] = 20; //arr2.length - 1로 넣는다 나머지는 리터럴로 설정할 수 있는데 마지막 번호는 늘어날 경우가 있기에
 
         for(int i = 0; i< arr1.length; i++) {
             System.out.printf("arr1[%d] : %d\n" , i, arr1[i]);
