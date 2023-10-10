@@ -17,7 +17,7 @@ public class ArrayEx19 {
         System.out.println("번호\t국어\t영어\t수학\t총점\t 평균");
         System.out.println("------------------------------------------");
 
-/* 내가 푼 거
+ //내가 푼 거
         for(int i = 0; i < score.length; i++){
             int[] arr = score[i];
             int sum = 0;
@@ -35,13 +35,13 @@ public class ArrayEx19 {
         System.out.println("----------------------------------------------");
         System.out.print("총점\t");
 
-        for(int i = 0; i<score[0].length; i++){
+        for(int i = 0; i<score[i].length; i++){
             int total = 0;
             for(int z = 0; z<score.length; z++){
                 total += score[z][i];
             }
             System.out.printf("%d\t" , total);
-        }*/
+        }
 
         //-------------------------------------------------------------------책에 나온 거
         int kor = 0;
@@ -70,7 +70,7 @@ public class ArrayEx19 {
         System.out.printf("총점\t%d\t%d\t%d", kor, eng, math);
 
         //----------------------------------------------------------------- 선생님이 알려주신 거
-        int[] sumArr = new int[score[0].length];
+        int[] sumArr = new int[score[0].length]; //총점을 구하기 위한 빈 공간
 
         System.out.println("번호\t국어\t영어\t수학\t총점\t평균");
         System.out.println("----------------------------------");
@@ -79,8 +79,11 @@ public class ArrayEx19 {
             int sum = 0;
             for(int z = 0; z < score[i].length; z++) {
                 int val = score[i][z];
-                sumArr[z] += val;
-                sum += val;
+                sum += val;// 각 개인의 총점을 구하기 위한 코드
+
+                sumArr[z] += val;// 전체 인원 수의 과목별 총점을 구하기 위한 코드
+                //z가 변하면서 3칸짜리 배열에 각각 과목에 맞는 점수가 들어간다!!!! 대박이야ArrayEx19
+
                 System.out.printf("\t%d", val);
             }
             float avg = (float)sum / score[i].length;
