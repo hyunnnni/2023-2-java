@@ -7,7 +7,7 @@ public class A_ArrayEx2 {
         중복허용
          */
 
-        int[] ran = new int[5];
+        int[] ran = new int[5]; //[]안에 들어가는 고정된 수를 매직넘버라고 한다 이럴 땐 상수로 만들어서 이름을 적어 놓는 게 더 좋다
 
         for(int i = 0; i<ran.length; i++){
             ran[i] = (int) (Math.random()*10) +1;

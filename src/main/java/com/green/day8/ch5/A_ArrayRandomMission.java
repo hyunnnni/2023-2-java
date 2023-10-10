@@ -26,7 +26,8 @@ public class A_ArrayRandomMission {
             System.out.printf("ran[%d] : %d\n", i, ran[i]);
         }
 
-        System.out.println(ran);
+        System.out.println(ran);//주소값을 나타낸다
+        System.out.println(ran.toString());//주소값을 나타낸다 같은 주소를 가지고 있는지 확인하기 위해 사용되는 편
         System.out.println(Arrays.toString(ran)); // 배열 다 출력
 
         }

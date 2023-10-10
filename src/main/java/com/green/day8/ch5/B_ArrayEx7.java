@@ -14,13 +14,14 @@ public class B_ArrayEx7 {
         for (int i = 0; i < num.length; i++) {
             num[i] = i;
         }
-        for(int i = 0; i<num.length; i++){
-            int n = (int)(Math.random()*num.length);
-            if(i != n) {
-                int tmp = num[i];
-                num[i] = num[n];
+       for(int i = 0; i<num.length; i++){
+            int n = (int)(Math.random()*10);
+            if( i == n ){continue;}
+
+                int tmp = num[1];
+                num[0] = num[n];
                 num[n] = tmp;
-            }
+
         }
         System.out.println(Arrays.toString(num));
     }
