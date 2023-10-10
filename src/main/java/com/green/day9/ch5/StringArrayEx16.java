@@ -16,13 +16,13 @@ public class StringArrayEx16 {
 
         String[] arr = new String[LEN];
 
-        for(int i = 0; i < arr.length; i++){
-            System.out.println("문자를 입력해주세요 >> ");
+        for(int i = 0; i < LEN; i++){
+            System.out.print("문자를 입력해주세요 >> ");
             String a = scan.nextLine();
             arr[i] = a;
         }
 
-        for(String str : arr){
+        for(String str : arr){//str는 단수라 배열을 넣을 경우는 s 붙여주는게 보기 좋다
             System.out.println(str);
         }
         System.out.println(Arrays.toString(arr));

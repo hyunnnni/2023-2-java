@@ -18,7 +18,7 @@ public class StringArrayEx12 {
         int z = 0;
         for(String str : names){//foreach문 (향상된 for문) 배열이면 사용할 수 있다
             //인덱스가 있는 배열들은 향상된 for문을 쓸 수 있다
-            //String str에 names의 0번째 방에 있던 문자열부터 차례대로 넣어준다
+            //String str에 names의 0번째 방에 있던 문자열부터 차례대로 넣어준다 배열의 길이만큼 돌고돈다
             //그래서 str만 출력했을 때 넣은 문자열이 모두 출력된다
             System.out.println(str);
             //대신 인덱스를 사용 못함
