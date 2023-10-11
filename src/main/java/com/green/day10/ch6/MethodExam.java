@@ -1,6 +1,6 @@
 package com.green.day10.ch6;
 
-public class C_MethodExam {
+public class MethodExam {
     /*void checkZero (int n){
         if( n == 0 ){
             System.out.println("0입니다.");

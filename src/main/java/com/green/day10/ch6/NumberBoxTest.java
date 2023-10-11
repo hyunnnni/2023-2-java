@@ -1,8 +1,8 @@
 package com.green.day10.ch6;
 
-public class B_NumberBoxTest {
+public class NumberBoxTest {
     public static void main(String[] args){
-        B_NumberBox nb1 = new B_NumberBox();
+        NumberBox nb1 = new NumberBox();
         //NumberBox의 객체의 주소값을 담을 수 있는 레퍼런스 변수 이름  = 새로운 걸 만들었다 클래스명(); ← 이게 객체주소값
 
         //     (n1, n2)

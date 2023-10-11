@@ -1,6 +1,6 @@
 package com.green.day10.ch6;
 
-public class A_TvTest {
+public class TvTest {
     public static void main(String[] args){
         /*
         c언어는 절차지향언어 작은 소프트웨어(임베디드) 만들 때 사용하기 좋다
@@ -36,7 +36,7 @@ public class A_TvTest {
         메소드
 
          */
-        A_Tv tv1 = new A_Tv(); // 어떠한 클래스를 객체 만들고 싶다면 new, 그리고 클래스명을 적으면 된다
+        Tv tv1 = new Tv(); // 어떠한 클래스를 객체 만들고 싶다면 new, 그리고 클래스명을 적으면 된다
         //Tv 객체의 주소값을 담을 수 있다. Tv는 타입, 대문자로 시작하면 객체의 주소값을 담을 수 있다
         tv1.channel =10; //tv1에 접근할 땐 .을 사용한다( 주소값. = 이 객체 접근한다)
         tv1.power = true; //이건 사용하는 거 읽기
@@ -44,7 +44,7 @@ public class A_TvTest {
 
 
 
-        A_Tv tv2 = new A_Tv();
+        Tv tv2 = new Tv();
         tv2.channel = 20;
 
         System.out.println("tv1.channel : "+tv1.channel);

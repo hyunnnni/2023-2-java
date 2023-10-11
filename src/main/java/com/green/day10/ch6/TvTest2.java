@@ -1,8 +1,8 @@
 package com.green.day10.ch6;
 
-public class A_TvTest2 {
+public class TvTest2 {
     public static void main(String[] args){
-       A_Tv tv1 = new A_Tv();
+       Tv tv1 = new Tv();
 
         System.out.printf("tv1.channel : %d\n", tv1.channel);//디폴트값 0만 존재
 

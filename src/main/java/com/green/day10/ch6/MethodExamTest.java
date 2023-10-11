@@ -1,8 +1,10 @@
 package com.green.day10.ch6;
 
-public class C_MethodExamTest {
+import java.util.Scanner;
+
+public class MethodExamTest {
     public static void main(String[] args){
-        C_MethodExam me = new C_MethodExam();
+        MethodExam me = new MethodExam();
         me.checkZero(10);
         me.checkZero(9);
         me.checkZero(0); //메소드를 사용한 방식이 리턴보단 보이드에 더 가깝기 때문에 보이드 메소드 사용

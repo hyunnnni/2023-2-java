@@ -1,6 +1,6 @@
 package com.green.day10.ch6;
 
-public class B_ReturnNumberBox {
+public class ReturnNumberBox {
     //보통 2차가공이 필요할 때 사용 되는 메소드
     //메소드를 수정하지 않고 2차 가공 때 결과값만 원하게 될 때 사용하는 편
     //출력을 제각각 바꿀 수 있기 때문
