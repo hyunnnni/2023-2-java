@@ -34,12 +34,13 @@ public class ArrayEx18 {
 
         //향상된 for문 사용해 sum값을 구한다
 
+        int total = 0;
         for(int[] arr : score){ //2차원 배열을 그냥 배열에 넣은 후 한 번 더 넣어주기
             for(int val : arr){// arr의 배열에 있는 값이 하나씩 들어가기 때문에 sum에 +되는 식이 for문에 따라서
-                sum += val;// ex) sum += 101;   sum += 102;    sum += 103 이런 식으로 진행이 되는거다
+                total += val;// ex) sum += 101;   sum += 102;    sum += 103 이런 식으로 진행이 되는거다
             }
         }
-        System.out.println("sum = "+ sum); //이렇게 sum은 따로 빼줘도 좋다
+        System.out.println("total = "+ total); //이렇게 sum은 따로 빼줘도 좋다
     }
 }
 

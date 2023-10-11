@@ -42,8 +42,12 @@ public class ArrayEx19 {
             }
             System.out.printf("%d\t" , total);
         }
+        System.out.println();
 
         //-------------------------------------------------------------------책에 나온 거
+        System.out.println("\n번호\t국어\t영어\t수학\t총점\t평균");
+        System.out.println("----------------------------------");
+        //이렇게 하면 과목이 늘어날 경우 총점이 대응이 안됨
         int kor = 0;
         int eng = 0;
         int math = 0;
@@ -68,11 +72,12 @@ public class ArrayEx19 {
         }
         System.out.println("----------------------------------------------");
         System.out.printf("총점\t%d\t%d\t%d", kor, eng, math);
+        System.out.println();
 
         //----------------------------------------------------------------- 선생님이 알려주신 거
         int[] sumArr = new int[score[0].length]; //총점을 구하기 위한 빈 공간
 
-        System.out.println("번호\t국어\t영어\t수학\t총점\t평균");
+        System.out.println("\n번호\t국어\t영어\t수학\t총점\t평균");
         System.out.println("----------------------------------");
         for(int i = 0; i< score.length; i++) {
             System.out.printf("%d", i+1);
@@ -82,7 +87,7 @@ public class ArrayEx19 {
                 sum += val;// 각 개인의 총점을 구하기 위한 코드
 
                 sumArr[z] += val;// 전체 인원 수의 과목별 총점을 구하기 위한 코드
-                //z가 변하면서 3칸짜리 배열에 각각 과목에 맞는 점수가 들어간다!!!! 대박이야ArrayEx19
+                //z가 변하면서 3칸짜리 배열에 각각 과목에 맞는 점수가 들어간다!!!!
 
                 System.out.printf("\t%d", val);
             }
