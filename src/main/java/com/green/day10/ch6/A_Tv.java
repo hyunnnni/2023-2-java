@@ -1,6 +1,6 @@
 package com.green.day10.ch6;
 
-public class Tv {//Tv가 클래스명 이걸 객체화 하기위해 new를 쓰고 Tv를 쓰면 객체가 된다
+public class A_Tv {//Tv가 클래스명 이걸 객체화 하기위해 new를 쓰고 Tv를 쓰면 객체가 된다
     //멤버필드, 속성, propecty
     //변수선언이 되어야 속성이 있다고 할 수 있다
     String color;

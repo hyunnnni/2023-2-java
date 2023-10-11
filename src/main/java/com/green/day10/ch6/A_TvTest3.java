@@ -1,10 +1,10 @@
 package com.green.day10.ch6;
 
-public class TvTest3 {
+public class A_TvTest3 {
     public static void main(String[] args){
-       Tv tv1 = new Tv();
+       A_Tv tv1 = new A_Tv();
 
-       Tv tv2 = tv1;//이때 tv2는 tv1에 접근하기 위한 주소값일 뿐 객체가 새로 생성된 게 아니다 동등하다는 뜻
+       A_Tv tv2 = tv1;//이때 tv2는 tv1에 접근하기 위한 주소값일 뿐 객체가 새로 생성된 게 아니다 동등하다는 뜻
 
         System.out.printf("tv1.channel : %d\n", tv1.channel);//디폴트값 0만 존재
 
