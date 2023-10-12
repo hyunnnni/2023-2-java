@@ -3,6 +3,7 @@ package com.green.day10.ch6;
 public class ReturnNumberBoxTest {
     public static void main(String[] args){
         ReturnNumberBox rnb = new ReturnNumberBox();
+        //NumberBox의 객체의 주소값을 담을 수 있는 레퍼런스+ 변수 이름  = 새로운 걸 만들었다+ 클래스명(); ← 이게 객체주소값
         //rnb.sum(10,20); 이렇게 사용하지 않고 결과값만 리턴 되어서 오기에 밑처럼 값을 넣어줘야한다 메소드에서 선언한 타입도 맞춰야 함
         //void라면 무조건 위처럼 적어야 됨
         int r1 = rnb.sum(10,20);

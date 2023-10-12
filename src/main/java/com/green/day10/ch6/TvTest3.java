@@ -10,6 +10,6 @@ public class TvTest3 {
 
         tv1.channelUp();//값이 1 올라가있다
         System.out.printf("tv1.channel : %d\n", tv1.channel);
-        System.out.printf("tv2.channel : %d\n", tv2.channel);// 같은 곳에 접근한거기 때문에 안의 값은 같다
+        System.out.printf("tv2.channel : %d\n", tv2.channel);// 같은 곳에 접근한 거라서 안의 값은 같다
     }
 }
