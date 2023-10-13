@@ -25,7 +25,7 @@ public class ArrayEx11 {
             // cntArr[val]++; 로 풀어쓸 수 있다
         }*/
         for(int num : numArr){
-            cntArr[num]++; //향상된 for문을 사용하면 좀 더 간단하다 numArr이 num에 하나씩 차례대로 들어가기 때문에
+            cntArr[num]++; //향상된 for문을 사용하면 좀 더 간단하다 numArr이 num에 하나씩 차례대로 새로 대입되는 것
             //예를 들어 num에 numArr[0]에 값 6이 들어가면 num은 6이 되면서 cntArr[num]에 [6]이 들어가면서 6번이 카운트 되는 형식
             //향상된 for문은 num에 배열의 값이 순차적으로 하나씩 들어왔다가 다시 그 다음 방 값으로 변환이 된다
             //계속 변하다는거임 초기화가 계속 된다고 그래서 이 for문 안에서 출력이든 뭐든 하지 않으면 변하는 건 없다

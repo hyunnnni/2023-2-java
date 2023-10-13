@@ -8,7 +8,7 @@ public class A_Array3_Mission {
 
         int [] arr2 = new int [4]; //arr1.length+1로 하는게 더 좋다 배열의 값이 더 늘어났을 때 적용되기 쉽게 리터럴은 최대한 안 쓰는게 좋다
 
-        for(int i = 0; i < arr1.length; i++){
+        for(int i = 0; i < arr1.length; i++){ //딥카피
             arr2 [i] = arr1 [i];
         }
 

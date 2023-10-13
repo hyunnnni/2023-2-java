@@ -78,6 +78,6 @@ public class MethodExam2 {
             case 12,1,2 :
                 return "겨울";
         }
-        return "없음";
+        return "없음";//return은 모든 값이 다 return이 필요하기 때문에 마지막에 혹시 모를 다른 경우를 위해 return 해줘야 한다.
     }
 }
