@@ -21,7 +21,7 @@ public class PrimitiveParamEx { //기본과 참조의 차이 기본은 주소값
         System.out.printf("main() : d2.x = %d\n", d2.x);//100
     }
 
-    public static void change(int x) {
+    public static void change(int x) { //같은 메소드 명이지만 받는 타입이 다른 여러 개를 만드는 걸 오버로딩이라고 한다
         x = 1000;
         System.out.printf("change() : x = %d\n", x);
     }

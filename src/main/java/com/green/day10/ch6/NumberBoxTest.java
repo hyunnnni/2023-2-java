@@ -3,7 +3,7 @@ package com.green.day10.ch6;
 public class NumberBoxTest {
     public static void main(String[] args){
         NumberBox nb1 = new NumberBox();
-        //NumberBox의 객체의 주소값을 담을 수 있는 레퍼런스+ 변수 이름  = 새로운 걸 만들었다+ 클래스명(); ← 이게 객체주소값
+        //NumberBox의 객체의 주소값만 담을 수 있는 레퍼런스+ 변수 이름  = 새로운 걸 만들었다+ 클래스명(); ← 이게 객체주소값
 
         //     (n1, n2)
         nb1.sum(10,20); //메소드를 사용한 부분 ()안은 아규먼트..?라고 함..

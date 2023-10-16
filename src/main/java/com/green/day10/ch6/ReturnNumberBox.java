@@ -11,6 +11,7 @@ public class ReturnNumberBox {
     int abs(int n1) {
         return (n1<0 ? -n1 : n1);
     }
+    //돌아가야하는 값의 타입과 (받아오는 값의 타입)
 
     int abs2(int n){// 무조건 모든 값이 리턴을 만나야 하기 때문에 모든 값이 만날 수 있게 작성해야함
         if(n < 0){

@@ -4,7 +4,7 @@ package com.green.day12.ch6;
 
 public class ReferenceParamEx2 {
     public static void main(String[] args) {
-        int[] x = {10};
+        int[] x = {10};//배열도 주소값 개념이기 때문에 DiffPriRef와 같은 결과
         System.out.printf("main() : x = %d\n" , x[0]);
         int r = 5;
         change(r);
