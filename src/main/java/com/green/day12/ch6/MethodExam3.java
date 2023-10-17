@@ -2,7 +2,7 @@ package com.green.day12.ch6;
 
 public class MethodExam3 {
 
-    int sumTest(String str){//문자열이라 문자가 배열로 저장이 된다
+    int sumTest1(String str){//문자열이라 문자가 배열로 저장이 된다
         int sum = 0;
         int num = Integer.parseInt(str);
         System.out.println(num);

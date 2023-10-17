@@ -14,7 +14,7 @@ public class ReferenceParamEx3 {
         System.out.println(Arrays.toString(arr));//정열된 배열로 출력
 
         //------------------------------------------------------------
-        System.out.println("sum = " + sumArr(arr)); //return 메소드를 써야된다
+        System.out.println(sumArr(arr)); //return 메소드를 써야된다
 
 
     }
