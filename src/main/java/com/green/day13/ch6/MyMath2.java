@@ -8,6 +8,7 @@ public class MyMath2 {
     //객체 생성을 여러 개 해도 상관이 없다
     //객체를 아무리 만들어도 .static을 쓰면 공간은 하나다
     //static 클래스는 클래스가 메모리에 올라갈 때 이미 자동적으로 생성된다 인스턴스를 따로 생성하지 않아도 됨
+    //객체화하지 않아도 메모리에 올라가는 친구
 
     static void print(){//클래스 메서드는 인스턴스 변수를 사용할 수 없다
         System.out.printf("staticNum : %d\n", MyMath2.staticNum);//, num 이걸 쓸 수 없다

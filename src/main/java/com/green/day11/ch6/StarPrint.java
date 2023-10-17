@@ -14,6 +14,8 @@ public class StarPrint {
           for(int i = 0; i<n; i++){
               line(n); //메소드에서 메소드를 호출하는 게 가능하다
               //같은 공간에 있기 때문에 line 앞에 .이 생략되어있다 (this.)
+              //this.도 있고 this()도 있다 메소드와 멤버필드 호출 this에 자기 자신의 주소값이 생략된 것
+              //this ()는 생성자를 호출할 때 사용
           }
       }
 

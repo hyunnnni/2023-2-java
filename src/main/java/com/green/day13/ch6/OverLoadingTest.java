@@ -4,6 +4,8 @@ public class OverLoadingTest {
     public static void main(String[] args) {
         System.out.println();
     }
+    //같은 클래스 안에 같은 이름의 메소드를 정의할 수 있는 게 오버로딩
+    //오버로딩 시 리턴타입과는 전혀 상관없다
     void print() {}
 
     void print(int n){}

@@ -14,7 +14,7 @@ public class VarArgEx {
 
 
     public static void main(String[] args) {
-        sum(10, 20); //같은 공간의 static메소드를 쓰고 있어서 앞의 .이 생략되어있음
+        sum(10, 20); //같은 공간의 static메소드를 쓰고 있어서 sum 앞에 .이 생략되어있음
         sum(10, 20, 30);
         sum(10, 20,30,40);
     }

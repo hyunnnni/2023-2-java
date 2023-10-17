@@ -13,7 +13,7 @@ public class CardTest3 {
 
     public static void main(String[] args) {
 
-        Card[] cards = makeCards(); //앞에 .이 없기 때문에 static 메소드임 String.valueOf() 이런 종류도 static메소드이다
+        Card[] cards = makeCards(); //앞에 .이 생략 됐기 때문에 static 메소드임 String.valueOf() 이런 종류도 static메소드이다
 
         System.out.println(makeCards().length);
 
@@ -33,7 +33,7 @@ public class CardTest3 {
             arr[i].denomination = denomination;
             /*Card c = new Card();
             c.pattern = pattern;
-            c.denomination = denomination;
+            c.denomination = denomination; 이건 그 안에 값을 먼저 정의하고 그 주소값을 [i]방에 넣어주는거다
             arr[i] = c;
             위 3줄과 같은 내용 */
         }
