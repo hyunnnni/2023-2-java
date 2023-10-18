@@ -22,14 +22,15 @@ public class Card {
 class CardTest{
     public static void main(String[] args) {
         CardDeck cd = new CardDeck();
-        //cd.printAll2();
+        cd.printAll2();
 
         //Card c1 = cd.getCard2(); 이걸 주석처리 안하면 여기서 한 칸 빼갔기 때문에 메소드에서 while문이 계속 null이라
         //무한루프로 돈다
+        //랜덤으로 방의 값을 알고 알고 난 후 그 방의 값을 null로 바꿈
 
         for(int i=0; i<52; i++){
             System.out.println(i);
-            Card c = cd.getCard();
+            Card c = cd.getCard2();
             c.printMySelf();
         }
 

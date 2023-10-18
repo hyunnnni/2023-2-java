@@ -3,7 +3,11 @@ package com.green.day14.ch6;
 public class CardDeck {
     Card[] cards; //배열을 생성자 안에 넣으면 지역변수가 되기 때문에 끝나면 죽어버린다 그래서 밖에 만들어준다
 
-    public CardDeck() {
+
+    public CardDeck(){
+        init();
+    }
+    private void init() {
         cards = new Card[52];
         String[] patterns = {"Spade", "Heart", "Diamond", "club"}; // 여러개의 값을 담은 것을 컬렉션이라고 함
         //그 종류 중 하나가 배열
@@ -13,7 +17,7 @@ public class CardDeck {
             for (int z = 1; z <= 13; z++) {
                 String denomination = getNumberFromInt(z);
                 Card c = new Card(pattern, denomination);//멤버필드의 값에 각 위에서 string타입에 넣어준 값을
-                //객체 생성을 새로 하나씩 하면서 넣는다
+                //객체 생성하면서 생성자를 불러와 받은 패턴과 디노미네이션의 값을 Card 패턴과 디노미네이션 값에 넣고 그 주소값을 방에 저장 하나씩 하면서 넣는다
                 cards[cnt++] = c;
                 //cards[cnt++] = new Card(pattern, denomination); 줄여서 쓰기
             }
@@ -49,7 +53,7 @@ public class CardDeck {
         }
     }
 
-    public Card getCard(){
+   /* public Card getCard(){
         Card c2 = null;
         for(int i =0; i<cards.length; i++) {
             int idx = (int) (Math.random()*cards.length);
@@ -63,10 +67,10 @@ public class CardDeck {
             break;
         }
         return c2;
-    }
+    }*/
 
     public Card getCard2() {
-        Card c = null;
+        Card c = null;// 이대로 출력을 하면 nullpoint에러가 뜬다.
         while(true){
             int rIdx = (int)(Math.random()*cards.length); //0번방부터 나오기 때문에 cards의 길이만큼 랜덤돌리면 된다
             c = cards[rIdx];
