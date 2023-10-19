@@ -59,7 +59,8 @@ class Deck2{
 
     public Card2 pick (){
         int a = (int)(Math.random()*CARD_NUM);
-        return cardArr[a];
+        //return cardArr[a]; 이렇게 적어도 되고 만든 메소드를 이용해도 좋다
+        return pick(a);
     }
 }
 

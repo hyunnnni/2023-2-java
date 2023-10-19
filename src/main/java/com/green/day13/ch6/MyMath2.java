@@ -20,4 +20,8 @@ public class MyMath2 {
         System.out.printf("staticNum : %d, num : %d\n", staticNum, num);//staticNum 적을 때 같은 공간에 있다면 MyMath. 이 생략되어있음
     } //보통 인스턴스 변수를 사용해서 이렇게 작성하지만 static메소드를 사용하는게 좋다 권장~ 속도가 더 빨라진다
     //더 줄여쓸 수도 있고 String.valueOf(); 이게 static메소드
+
+    public static void staticAbs(int a){
+        System.out.println(a);
+    }
 }

@@ -23,6 +23,8 @@ class Deck{
 }
 
 class Card{//상수는 한 번 입력된 값이 변하지 않는 것 리터럴은 값 그 자체를 리터럴이라고 한다.
+    //상수는 앞에 public을 써도 상관없다 어차피 수정이 안되는 값이니깐
+
     static final int KIND_MAX = 4;//카드무늬 수
     static final int NUM_MAX = 13;//무늬별 카드 수
     //객체화가 필요없기 때문에 다른 클래스에서 사용할 땐 객체 생성을 하지않고 그냥 Card.KIND_MAX라고 적어도 쓸 수 있다.
