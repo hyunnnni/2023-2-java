@@ -18,7 +18,7 @@ public class CardTest2 {
 
     }
     public static Card[] makeCards(){//파라미터 안에 아무것도 없으면 아무것도 안 적어도 된다
-        Card[] makeCards = new Card[52]; //card[]에는 card[]타입의 주소값만 넣을 수 있다
+        Card[] makeCards = new Card[52]; //card[]에는 card[]타입의 주소값만 넣을 수 있다.
         return makeCards;
     }
 
