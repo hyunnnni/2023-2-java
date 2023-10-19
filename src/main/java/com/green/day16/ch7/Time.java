@@ -14,9 +14,24 @@ public class Time {
     }
 
     //2.setter 메소드 속성마다 하나 씩 다 적어야한다.
+    //private으로 감춰진 멤버필드의 값을 변경할 때 사용
     //이름은 set하고 원하는 멤버필드이름을 적는데 첫글자는 대문자로 적기
     //오른쪽 키 - Generate - setter 을 누르면 이런 메소드를 자동으로 적어준다
     //저번 constructor 자동으로 생성자에서 멤버필드에 받은 파라미터값을 넣어줬던 것과 비슷
+
+    //getter private으로 감춰진 값을 가지고 와야할 때 사용한다
+    public int getHour() {
+        return hour;
+    }
+
+    public int getMinute() {
+        return minute;
+    }
+
+    public int getSecond() {
+        return second;
+    }
+
     public void setHour(final int hour) {
         if(hour>MAX){
             this.hour = MAX;
