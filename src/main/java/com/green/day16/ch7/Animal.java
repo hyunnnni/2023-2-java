@@ -74,6 +74,7 @@ class AnimalTest{
         //강제형변환 해도 안된다
 
         //3.타입은 알고 있는 메소드만 호출할 수 있고 호출이 된다면 객체 기준이다.
+        //부모도 알고 자식도 아는 경우 오버라이딩이 된 경우다
         Bulldog bull3 = new Bulldog();
         bull3.crying();//Bulldog부터 탐색해 같은 이름의 메소드를 호출 만약 없다면 상속해준 부모 클래스로 가서 데려온다.
         bull3.jump();

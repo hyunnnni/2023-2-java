@@ -2,7 +2,8 @@ package com.green.day16.ch7;
 
 
 import static com.green.day13.ch6.MyMath2.staticAbs; //static을 import할려면 import static을 적으면 된다
-import com.green.day13.ch6.MyMath2;
+import com.green.day13.ch6.MyMath2;//앞은 다 소문자니깐 패키지 명과 마지막은 클래스명
+//대문자 소문자로 패키지 클래스 메소드 구분 가능~
 import com.green.day15.ch7.Parent;//Parent 대신 *(와일드카드)을 쓰면 ch7에 있는 파일들을 전부 다 import하는 효과가 있다.
 
 
