@@ -48,6 +48,7 @@ class Buyer2 {
     private Product2[] product2Arr;
     int cun = 0;
     final int IMONEY;
+    //구매한 각 제품의 개수를 구하는 방법도 있음 선생님 깃허브보기
 
     int sum2 = 0;
     public Buyer2() {
@@ -82,6 +83,11 @@ class Buyer2 {
 
     public void buy(Product2 product2){
 
+        if( product2 == null){//혹시나 들어올 null을 위해 예외처리
+            System.out.println("잘못 구매하셨습니다.");
+            return;
+        }
+
 
         //만약 칸이 다 차고 money가 많다면 이게 먼저 막혀야 하고 아래 코드가 실행이 되면 안되니 이 코드 먼저 적어줘야한다.
         if(cun > product2Arr.length){//4. cun이 11이 되면 여기 걸러지면 아래 아무런 코드도 실행이 안되고
@@ -94,13 +100,13 @@ class Buyer2 {
             return;
         }
 
-
-
-
         if(money<product2.getPrice()){
             System.out.println("금액 부족");
             return;// money가 Probuct2에 있는 price의 값보다 적어진다면 금액부족이 뜨고 아래 코드는 실행이 안되게 리턴
         }
+        //앞의 이 조건문이 다 통과되었을 때 물품이 구매되어야 하니 순서 설정을 잘 해야한다
+
+
         System.out.printf("%s를 구매했습니다." , product2.getName());//getName로 해당되는 타입의 클래스에 가서
         //그 클래스에 맞게 바꿨던 name을 가져온다.
         money -= product2.getPrice();//buyer의 money에서 구매한 제품의 가격만큼 빼야하니 이 메소드를 사용해 -한다.

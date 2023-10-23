@@ -30,8 +30,9 @@ class AnimalTest2{
 
         Animal ani = bulldog;
         System.out.println(ani instanceof Cat);// instanceof는
-        // 앞에 뭐가 있는지는 모르겠지만 instanceof 뒤 타입이 형변환이 되냐 안되냐를 묻는 것
-        // 앞은 클래스명 뒤는 타입으로 적어야딤
+        // 앞에 뭐가 있는지는 모르겠지만 instanceof 뒤 타입이 형변환이 되냐 안되냐를 묻는 것 boolean타입
+        //전혀 모르는 관계에선 사용이 안된다
+        // 앞은 클래스명(주소값) 뒤는 타입으로 적어야딤
         //상속관계가 아니라 형제관계라 안됨
         //Cat cat2 = (Cat)ani; 에러가 터진다*/
 
@@ -74,13 +75,15 @@ class AnimalTest{
         //강제형변환 해도 안된다
 
         //3.타입은 알고 있는 메소드만 호출할 수 있고 호출이 된다면 객체 기준이다.
-        //부모도 알고 자식도 아는 경우 오버라이딩이 된 경우다
+        //부모도 알고 자식도 아는 경우는 오버라이딩이 된 경우다
+        //자식만 갖고있는 메소드는 부모기준으로 호출 했을 때 가져올 수 없다
         Bulldog bull3 = new Bulldog();
         bull3.crying();//Bulldog부터 탐색해 같은 이름의 메소드를 호출 만약 없다면 상속해준 부모 클래스로 가서 데려온다.
         bull3.jump();
 
         Dog dog2 = new Bulldog();
         //dog2.jump() Dog가 알고 있는 메소드만 호출 Dog는 Bulldog의 부모클래스이므로 Bulldog의 메소드를 알 수 없다
+        //타입이 dog의 주소값을 넣을 수 있는 dog이기 때문에 dog에는 없고 자식에만 있는 메소드는 호출이 안된다.
         dog2.crying();//알고있다면 객체 기준으로 먼저 탐색한다 Animal에 crying메소드가 있으니 dog도 Bulldog도 다 이 메소드를 알고있다
     }
 }
