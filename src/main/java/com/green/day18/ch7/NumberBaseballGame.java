@@ -1,6 +1,7 @@
 package com.green.day18.ch7;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class NumberBaseballGame {
     public static void main(String[] args) {
@@ -18,6 +19,37 @@ class NumberBaseball{
     }
     public void start(){
         setRandomNumNotDuplicate();
+        getUserInput();
+    }
+
+    private void getUserInput(){
+        Scanner scan = new Scanner(System.in);
+        final int [] userArr = new int[GAME_COUNT];
+        for(int i = 0; i<GAME_COUNT; i++){
+            System.out.printf("%d 숫자 >> ", i+1);
+            userArr[i] = scan.nextInt();
+        }
+
+        boolean r = checkResult(userArr);
+
+        scan.close();
+    }
+
+    public boolean checkResult(int[] userArr) {
+        int strike = 0, ball = 0, out = 0;
+        for (int i = 0; i < gameNumbers.length; i++) {
+            for (int z = 0; z < userArr.length; z++) {
+                if (gameNumbers[i] == userArr[z]) {
+                    if (i == z) {
+                        strike++;
+                    } else {
+                        ball++;
+                    }
+                }
+            }
+        }
+        out = GAME_COUNT - (strike + ball);
+        return false;
     }
 
     public void setRandomNumNotDuplicate(){

@@ -36,11 +36,14 @@ class ArrayListTest2{
         int v1 = 10;
         Integer v2 = 10;
         System.out.println(v1 == v2);
-        //Integer을 이런 식으로 사용할 수 있다 기본형의 래퍼클래스
+        //Integer을 이런 식으로 사용할 수 있다 기본형의 래퍼클래스 객체이다
         //레퍼런스라서 메소드도 가질 수 있다 숫자가 저장될 때 Integer로 변환되어서 저장이 되는 것이다.
         //기본형 8개는 다 래퍼클래스가 있다
         List<Integer> list = new ArrayList();
         //List<래퍼 타입만 넣을 수 있다>
+        //List는 객체화가 될 수 없는 interface다.
+        //list를 상속받은 객체의 주소값만 담겠다라는 뜻 <그것도 정수형>
+        //ArrayList()배열로 처리하는 메소드
         list.add(10);
         list.add(20);
         list.add(30);

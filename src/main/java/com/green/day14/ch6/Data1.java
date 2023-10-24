@@ -6,7 +6,7 @@ public class Data1 {
         int value;
         int value2;
         int value3;
-        private int aaa; //앞에 private을 붙이면 단순하게 접근이 안된다 data1.aaa=3이 안된다
+        private int aaa ; //앞에 private을 붙이면 단순하게 접근이 안된다 data1.aaa=3이 안된다
     //그리고 같은 클래스 안에서만 사용할 수 있다 메소드 앞에도 붙일 수 있다
 
         public Data1(){ //기본생성자

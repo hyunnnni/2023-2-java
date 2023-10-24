@@ -11,6 +11,7 @@ public class MyMath2 {
     //객체화하지 않아도 메모리에 올라가는 친구
 
     static void print(){//클래스 메서드는 인스턴스 변수를 사용할 수 없다
+
         System.out.printf("staticNum : %d\n", MyMath2.staticNum);//, num 이걸 쓸 수 없다
         //클래스 메소드에서 인스턴스 메소드도 호출하지 못한다
     }

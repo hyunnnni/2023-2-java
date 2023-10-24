@@ -25,6 +25,7 @@ public class Car2 { //초기화 방법에 대한 설명
 class Car2Test {
     public static void main (String[] args){
         Car2 c1 = new Car2();
+
         c1.color = "black";
         c1.gearType = "manual";
         c1.door = 5;

@@ -1,5 +1,10 @@
 package com.green.day17.ch7;
 
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
+
 public class PolyArgumentTestVer2 {//객체 생성 시 아래의 아규먼트 ()를 받아서 멤버필드를 변경할 수 있는 생성자를 만들어라
     public static void main(String[] args) {
         Product2 p = new Product2("제품명", 1000);
@@ -35,6 +40,19 @@ class PolyArgumentTestVer2_3{//배열의 각방에 순차적으로 구매한 이
 
         buyer.summary3(); //총 구매 금액 : 1000만원
 
+    }
+}
+
+class PolyArgumentTestVer2_4{//hashMap에서 한 거 확인하는 메인 메소드
+    public static void main(String[] args) {
+        Buyer3 buyer = new Buyer3();
+        buyer.buy(new Computer2());
+        buyer.buy(new Computer2());
+        buyer.buy(new Tv2());
+        buyer.buy(new Tv2());
+        buyer.buy(new Tv2());
+        buyer.buy(new Audio2());
+        buyer.summary();
     }
 }
 
@@ -172,4 +190,80 @@ class Audio2 extends Product2{
     public Audio2(){
         super("Audio", 500);
     }
+}
+
+class Buyer3 { //hashMap을 쓴 거
+
+    int money;
+    int bonusPoint;
+    private Product2[] product2Arr;
+    private int i;
+    private Map<String, Integer> buyItems;
+    int cun = 0;
+    int sum2 = 0;
+
+    public Buyer3() {
+        buyItems = new HashMap();
+        this.money = 1000;
+        this.bonusPoint = 0;
+        product2Arr = new Product2[10];
+    }
+
+    public void summary(){//경록씨가 한 거
+        System.out.printf("총 구매가격은 %d만원입니다.", sum2);
+    }
+
+
+    public void buy(Product2 product2){
+
+        if( product2 == null){
+            System.out.println("잘못 구매하셨습니다.");
+            return;
+        }
+
+        if(cun > product2Arr.length){
+            cun++;
+            return;
+        } else if (cun == product2Arr.length) {
+            System.out.println("구매횟수를 초과했습니다. 인 당 10번만 구매 가능합니다");
+            cun++;
+            return;
+        }
+
+        if(money<product2.getPrice()){
+            System.out.println("금액 부족");
+            return;
+        }
+
+
+        System.out.printf("%s를 구매했습니다.\n" , product2.getName());
+        money -= product2.getPrice();
+        bonusPoint += product2.getBonusPoint();
+        sum2 += product2.getPrice();
+
+        String productName = product2.getName();
+        if(buyItems.containsKey(productName)) { //buyItems에 키값에 해당 productName이 있는지 물어보는 조건문
+            //containsKey(key) map에 키값이 있는지 확인하는 메소드
+            //containsValue(value)이건 해당 값이 있는지 확인
+            buyItems.put(productName,buyItems.get(productName) + 1);
+        }else {
+            buyItems.put(productName,1);
+
+        }
+        Set<String> namesSet = buyItems.keySet();
+        Iterator<String> iterator = namesSet.iterator();
+        while (iterator.hasNext()){//물건의 개수가 엄청 많아도 이거 하나로 해결 가능하다 하나씩 입력해주지 않아도 된다
+            String key = (String) iterator.next();
+            int cnt = buyItems.get(key);
+            System.out.printf("%s : %d대\n", key, cnt);
+        }
+
+        System.out.printf("money : %d, bonusPoint : %d\n",money, bonusPoint);
+
+
+        product2Arr[cun++] = product2;
+
+    }
+
+
 }
