@@ -10,6 +10,8 @@ public class ExceptionEx1 {
             //try로 감싼 부분은 예외가 발생되면 catch로 잡을 수 있다
             //만약 num/0을 바깥에 적었다면 그냥 에러가 터지고 다 실행되지 않는다
         }catch (Exception e){//try에서 예외가 발생이 되었을 때 쓰는 부분 예외가 발생 안되면 지나감
+            //예외가 발생하면 Exception이란 클래스에 에러정보를 넣는다 그럼 그 에러를 불러오는게 ( )
+            //Exception의 주소값을 담을 수 있는 e
             e.printStackTrace();//에러 메세지를 콘솔에 띄우는 메소드
             System.out.println("예외발생");
             num = -1;
@@ -60,7 +62,7 @@ class ExceptionEx1_3{
             System.out.println("수학적 예외");
         }catch (NullPointerException e){
             System.out.println("null포인트 예외");
-        }catch (Exception e){//모든 예외를 다 잡아 버리니 가장 마지막에 있어야 한다.
+        }catch (Exception e){//모든 예외를 다 잡아 버리니 가장 마지막에 있어야 한다. Exception의 최상위객체
             //다른 Arith랑 Null의 부모는 Exception이다 상속관계
             System.out.println("모든 예외");
         }

@@ -2,6 +2,7 @@ package com.green.day19.ch7.StarCraft2;
 
 public interface Fighterble extends Movable, Attackable { //interface는 다중 상속이 가능하다
     //구현부가 없어서 다중상속을 해도 문제가 안된다 그래서 다중상속이 가능하다
+    //클래스는 다중상속이 안된다 같은 이름의 메소드가 있으면 구분이 안되기때문
 
 }
 

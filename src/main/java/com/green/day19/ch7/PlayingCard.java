@@ -1,6 +1,6 @@
 package com.green.day19.ch7;
 
-public interface PlayingCard {
+public interface PlayingCard {//메소드는 추상메소드만 가지고 있다
     public static final int SPADE = 4;//interface는 멤버필드 앞에 public static final가 다 붙여져있다
     final int DIAMOND = 3;//여기도 자동으로 다 public static final이 앞에 있다
     static int HEART = 2;
