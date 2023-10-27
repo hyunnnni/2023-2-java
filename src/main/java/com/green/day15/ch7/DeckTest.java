@@ -11,9 +11,11 @@ public class DeckTest {
         System.out.println(c2.toString());//toString의 타입은 String 마우스를 올려보면 이 메소드의 선언부를 알 수 있다. 리턴타입 메소드
         System.out.println(c2);
 
+
         String str = new String("ddd"); //여기서 오버라이딩이 진행됨
         System.out.println(str);
         System.out.println(str.toString()); //toString이 String으로 오버라이딩 되었다
+
     }
 }
 

@@ -38,7 +38,7 @@ class Deck2{
         }
     }*/
     //선생님이 한 거
-    public Deck2( ){//아래 pick 생성자 때문에 잠시 int 넣음
+    public Deck2( ){
         Card2 c1 = new Card2();
         int cnt = 0;
         for (int i = 1; i<=c1.KIND_MAX; i++){

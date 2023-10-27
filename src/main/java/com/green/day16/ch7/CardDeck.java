@@ -5,6 +5,7 @@ public class CardDeck {//배열안의 주소값들을 랜덤하게 위치를 섞
     public static void main(String[] args) {
         Deck3 deck = new Deck3();
 
+        System.out.println("---------------");
         deck.ranCard();
 
     }
