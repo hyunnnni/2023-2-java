@@ -11,13 +11,20 @@ import java.util.List;
 public class BoardDao {//insert
     public static int insboard(BoardEntity entity){ //title, ctnts, writer
        int result = 0;
-       String sql = /*String.format(*/"INSERT INTO board (title, ctnts, writer) "+
-                       "values" + "(?,?,?)"; //insert하는 거
+      /* String sql = *//*String.format(*//*"INSERT INTO board (title, ctnts, writer) "+
+                       "values" + "(?,?,?)"; */
+        //업데이트 문처럼 하는 insert문
+        String sql = "INSERT INTO board" + // 가독성이 더 좋다, 오라클에서 되는지는 확인 되지 않는다
+                "SET title = ?" +
+                ", ctnts = ?" +
+                ", writer = ?";
+
 
                        /*"('%s','%s','%s')"
                , entity.getTitle(), entity.getCtnts(), entity.getWriter());*/
         Connection con=  null;
-        PreparedStatement ps =null;
+        PreparedStatement ps =null;//?에 들어가는 것
+        // 문자열로 들어가면 자동으로 ''가 들어가고 아니라면 그냥 들어가게 해준다
 
        try{
            con = MyConn.getConn();
@@ -32,7 +39,8 @@ public class BoardDao {//insert
            e.printStackTrace();
        }finally{
 
-           MyConn.close(con, ps);
+           MyConn.close(con, ps);//리소스를 너무 많이 잡아먹어서 닫아줘야한다
+           //filo 스텝방식 마지막에 넣어준 걸 먼저 빼준다
        }
        return result;
     }
@@ -82,6 +90,8 @@ public class BoardDao {//insert
     }
 
     public static List<BoardEntity> selBoardList(){ //select
+        //board에 있는 컬럼들의 값이 BoardEntity에 들어가니깐
+        //여러 레코드들을 다 담을 수 있는게 List<BoardEntity>다.
         List<BoardEntity> list = new ArrayList<>();
         Connection con = null;
         PreparedStatement ps = null;
@@ -129,16 +139,17 @@ public class BoardDao {//insert
             con = MyConn.getConn();
             ps = con.prepareStatement(sql);
             ps.setInt(1, pk);
-            rs = ps.executeQuery();//읽어오는 것 가져올 수 있는 쿼리의 경우의 수는 2개 1개가 넘어오거나 0개 넘어오거나
+            rs = ps.executeQuery();//읽어오는 것 가져올 수 있는 레코드의 경우의 수는 2개 1개가 넘어오거나 0개 넘어오거나
 
-        if(rs.next()) {//0개가 넘어오면 오류가 있을 수 있으니 무조건 if나 while로 감싸준다
+        if(rs.next()) {//없는 pk값이 들어오면 없는 레코드임에도 값이 null로 뜨면서 실행이 될 수 있으니 if나 while로 감싸준다
+            //next() 맨 처음 아무 줄도 선택을 안 하고 있다가 다음 줄을 커서로 선택해주는 메소드
             entity.setIboard(pk);
             entity.setTitle(rs.getString("title"));
             entity.setWriter(rs.getString("writer"));
             entity.setCtnts(rs.getString("ctnts"));
             entity.setCreatedAt(rs.getString("created_at"));
             entity.setUpdatedAt(rs.getString("updated_at"));
-            return entity;
+            return entity;//없는 pk값이 들어올 수 도 있으니 있을 때만 실행되며 return 될 수 있게 if문 안에서 주소값을 return해준다
         }
 
         }catch (SQLException e){
@@ -146,7 +157,7 @@ public class BoardDao {//insert
         }finally {
             MyConn.close(con, ps, rs);
         }
-        return null;
+        return null;//없는 pk값이 들어오면 그냥 null로 리턴
     }
 
 
