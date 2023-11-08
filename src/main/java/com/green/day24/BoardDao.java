@@ -58,6 +58,7 @@ public class BoardDao {//insert
 
             ps.setInt(1, entity.getIboard());
             result = ps.executeUpdate();
+
         }catch (Exception e){
             e.printStackTrace();
         }finally {
