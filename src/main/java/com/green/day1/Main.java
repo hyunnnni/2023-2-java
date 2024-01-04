@@ -5,6 +5,7 @@ package com.green.day1;
 class Main {
     public static void main(String[] args){
         System.out.println("hello, world!");
+
     }
     //파란색 키워드 : 예약어
 }
