@@ -15,5 +15,6 @@ public class StreamEx5 {
         }
         double avg2 = Optional.of(avg).map(item -> item.getAsDouble()).orElse(0.0);
         System.out.println("avg : "+ avg2);
+
     }
 }
